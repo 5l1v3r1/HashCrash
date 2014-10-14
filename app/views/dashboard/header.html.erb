@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +9,11 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>HashCrash</title>
+
+    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="starter-template.css" rel="stylesheet">
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
 	
   </head>
 
@@ -39,12 +41,3 @@
     </div>
 
     <div class="container">
-
-	<%= yield %>
-
-	</div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  </body>
-</html>
-
