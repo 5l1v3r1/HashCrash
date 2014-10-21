@@ -1,6 +1,17 @@
-<h2>Select the Algorithm</h2>
-	<p class="lead">
+<script>
+$('#algo-selection button').on('click', function (e) {
+    $(this).addClass('active').siblings().removeClass('active');
 
+    // TODO: insert whatever you want to do with $(this) here
+});
+</script>
+
+<br />
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">1. Select the Algorithm</h3>
+	</div>
+	<div class="panel-body">
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="active"><a href="#">Common</a></li>
 			<li><a href="#">OSX</a></li>
@@ -10,10 +21,8 @@
 			<li><a href="#">Misc</a></li>
 			<li><a href="#">Uncommon</a></li>
 		</ul>
-
-		<br />
         
-        <div class="algo-selection">
+		<div class="algo-selection">
 			<button type="button" class="btn btn-default btn-lg">MD5</button>
 			<button type="button" class="btn btn-default btn-lg">SHA1</button>
 			<button type="button" class="btn btn-default btn-lg">SHA-256</button>
@@ -29,35 +38,57 @@
 			<button type="button" class="btn btn-default btn-lg">Wordpress</button>
 			<button type="button" class="btn btn-default btn-lg">Double MD5</button>
 			<button type="button" class="btn btn-default btn-lg">Double SHA1</button>
-        </div>
-        
-	</p>
-	
-<br />
-<h2>Provide hash<font color="grey">es</font></h2>
-		<p class="lead">
-			<form role="form">
-				<div class="form-group">
-					<label for="name">Paste here</label>
-					<textarea class="form-control" rows="5"></textarea>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">2. Provide hash<font color="grey">es</font></h3>
+	</div>
+	<div class="panel-body">
+		<form role="form">
+			<div class="form-group">
+				<label for="name">Paste here</label>
+				<textarea class="form-control" rows="5" placeholder="8743b52063cd84097a65d1633f5c74f5"></textarea>
+			</div>
+		</form>
+		<b>
+		Or 
+		<label class="btn btn-primary" for="my-file-selector">
+		<input id="my-file-selector" type="file" style="display:none;">
+		upload a file
+		</label>
+		containing one hash per line. (none selected)
+		</b>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">3. Add attacks</h3>
+	</div>
+	<div class="panel-body">
+		
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">4. Start</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<button type="button" class="btn btn-danger btn-lg">Queue attack</button>
+			<div class="col-lg-6">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<input type="checkbox">
+						Email results
+					</span>
+					<input type="text" class="form-control" placeholder="name@example.com">
 				</div>
-			</form>
-
-			<b>
-			Or 
-			<label class="btn btn-primary" for="my-file-selector">
-			<input id="my-file-selector" type="file" style="display:none;">
-				upload a file
-			</label>
-			containing one hash per line.
-			</b>
-
-		</p>
-
-<br/>
-<h2>Add attacks</h2>
-
-<br />
-<h2>Reporting options</h2>
-
-
+			</div>
+		</div>
+	</div>
+</div>
